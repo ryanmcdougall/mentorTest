@@ -2,28 +2,54 @@ Answer each question in a written format
 
 1. What does semantic HTML mean?
 
+Semantic HTML is defined as the syntax of using mark up tags to make code more eligible and easier to read. These specific mark up tags will be used in correlation to the content they contain. For example, a P tage, <p>, will allow the computer and developer to understand that some basic text elements will be inside.
+
 2. What is the box model?
+
+The Box Model is a CSS style that wraps all of the HTML content and allows it to be manipulated with many different properties such as: position, display, margin, padding, etc.
 
 3. What is the difference between IDs and Classes?
 
+IDs and Classes are CSS properties that are given items so they can be manipulated. Classes are used when you have multiple similar elements that you want to be effected by the same CSS tag. Example: a list. An id is usually given to one or very few elements so that they can be specifically manipulalted with out effecting the other elements within the class.
+
 4. What is z-index (CSS property) useful for?
+
+The z-index can be summarized as a numerical value that correlates with what level the element is visually on. If two identical elements are created, one background is red the other is blue, then we dont know which one will be visible. (this is going off the assumption they are given the position of "absolute", meaning they are both in the same position)
+If we give the blue background a z-index of 2 and the red a 1, then the blue will be visible and stacked above the red.
 
 5. Summarize what the keyword 'this' is used for?
 
+"This" is based off of how something is called/invoked, if it is a simple function then the "this" keyword refers to the global object. It can also mean a new instance from a constructor function. Also, it can refer to a parent object in which something is being invoked.
+
 6. What is a callback? What are common uses for callbacks in JavaScript?
+
+A callback is a function thst is passed to another function. One of the core reasons is that a function can take another function so execution can continue and we dont have to wait for a response for it to move on.
 
 7. What is a closure and why is it useful?
 
+A closure can be described as a function located in the inner scope of another function. Closures are unique because they have access to all scopes (global, inner, and outer)
+
 8. How does a prototype work?
+
+It can be a predefined or user defined function. In another instance, all objects inherit proterties and methods from a prototype. For example, data objects inherit from data.prototype, person objects inherit from person.prototype, etc.
 
 9. Describe what a component-based framework/library is?
 
+A component based framework is a single page application that is created with multiple components to be re-utilized multiple times.
+
 10. What is the component lifecycle in React?
+
+The component lifecycle is a collection of methods that control the process of mounting and unmounting.
 
 11. What is REST? (not just a description of the acronym)
 
+REST is the architectural style for providing standards that make it easier for systems to communicate with each other. When using the REST paradigm the server does care about the state of the client, meaning it is stateless. When making a REST request we need to have an HTTP verb to define what operation is needed (GET, POST, PUT, DELETE). Some other common things are a header, a path to a resource, and an optional message body.
+
 12. Name three common ways of getting data from a request (in Express.JS):
 
+1. Req.body
+2. Req.params
+3. Req.query
 
 
 -- =====================
@@ -38,8 +64,20 @@ email varchar(255)
 
 -Get all users:
 
+SELECT * FROM users
+
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+
+INSERT INTO users (name, email) 
+VALUES ("Ryan", "fake@fake.com")
 
 -Update the newly created user's name to 'Bobby Boy':
 
+UPDATE users 
+SET name = "Bobby Boy"
+WHERE name = "Ryan"
+
 -Delete the newly updated user:
+
+DELETE FROM users
+WHERE name = "Bobby Boy"
