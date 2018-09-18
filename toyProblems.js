@@ -3,11 +3,11 @@
 module.exports = {
   reverseIt: (str) => {
     let split = str.split("")
-      console.log('we have split the incoming string into single letters in an array ::::', split)
+      // 'we have split the incoming string into single letters and put them in an array'
     let reversed = split.reverse()
-      console.log('now we apply the reverse method to the array of single letters to have a result of ::::', reversed)
+    // 'now we apply the reverse method to the array of single letters'
     let joined = reversed.join('')
-      console.log('lastly, we use the join method to take our reversed array of single letters to return our original string reversed ::::', joined)
+      // 'lastly, we use the join method to take our reversed array of single letters to return our original string reversed'
     
     return joined
    },
@@ -18,9 +18,9 @@ module.exports = {
   removeDups: (arr) => {
     for(let i = 0; i < arr.length; i++){
       for(let j = i + 1; j < arr.length; j++){
-        console.log('starting with a nested for loop allows me to have access to every value in the passed array')
+        // 'starting with a nested for loop allows me to have access to every value in the passed array'
         if(arr[i] === arr[j]){
-          console.log('if this conditional results in "true", then we can splice out exactly where that duplicate value is located, always being the higher index being removed')
+          // 'if this conditional results in "true", then we can splice out exactly where that duplicate value is located, always being the higher index being removed'
           arr.splice(j, 1);
         }
       }
@@ -33,13 +33,13 @@ module.exports = {
 
   titleIt: (str) => {
     let lower = str.toLowerCase()
-      console.log("lets start by making sure all the letters are lower case ::::", lower)
+      // "lets start by making sure all the letters are lower case"
     let split = lower.split(' ')
-      console.log('now we have the string separated into an array, having each individual word being a value in the array ::::', split)
+      // 'now we have the string separated into an array, having each individual word being a value in the array'
     let mapped = split.map( (word) => word[0].toUpperCase() + word.substring(1))
-      console.log('a simple map that has each element take the first letter and capatilize it, then add the rest of the string should do the trick ::::', mapped)
+      // 'a simple map that has each element take the first letter and capatilize it, then add the rest of the string should do the trick'
     let joined = mapped.join(' ')
-      console.log('to finish, i will take this new mapped arr and join all the elements together as one string again')
+      // 'to finish, i will take this new mapped arr and join all the elements together as one string again'
 
     return joined
     
@@ -50,8 +50,8 @@ module.exports = {
 
   vowelCounter: (str) => {
     let vowelsCount = str.match(/[aeiou]/gi)
-      console.log('im going to use Regex to keep an array of all instances of the corresponding vowels i have placed as the parameter of the match method')
-      console.log('if there happens to be no vowels we get "null", so i set up a ternary to return false or the length of the array of counted vowels')
+      // 'im going to use Regex to keep an array of all instances of the corresponding vowels i have placed as the parameter of the match method'
+      // 'if there happens to be no vowels we get "null", so i set up a ternary to return false or the length of the array of counted vowels'
       return vowelsCount === null ? 0 : vowelsCount.length
   },
 
@@ -59,12 +59,12 @@ module.exports = {
   //return the number of vowels in the string
 
   isPrime: (num) => {
-      console.log("i need to start with testing if the passed number is two, this is because it gives an incorrect result due to the layout of my function/for loop")
+      // "i need to start with testing if the passed number is two, this is because it gives an incorrect result due to the layout of my function/for loop"
     if (num === 2) {
       return true;
     } 
     else if(num > 1){
-      console.log("now i need to establish if the passed number is greater than one and or positive, meaning it is a testable number ")
+      // "now i need to establish if the passed number is greater than one and or positive, meaning it is a testable number "
         for (var i = 2;  i < num; i++) {
           if (num % i !== 0 ) {
             return true;
